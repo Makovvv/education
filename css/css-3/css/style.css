@@ -1,12 +1,16 @@
 body{
 	font-size: 17px;
 }
+
+
+
 .example-block{
-	/* padding: 10px 20px 30px 20px; */
-	margin: 10px 20px 30px 20px;
+	height: 300px;
 	border: 1px solid black;
+	margin: 0px 0px 40px 0
 }
 
 .example-string{
-
+	display: block;
+	border: 1px solid black;
 }
