@@ -40,33 +40,3 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
 
 /*  */
-
-body{
-	background: rgba(0, 0, 0, 0.2);
-	padding: 40px;
-}
-.block {
-	border: 2px solid darkred;
-	max-width: 800px;
-	margin: 0 auto;
-	height: 7800px;
-	position: relative;
-}
-.block div{
-	font-size: 24px;
-	line-height: 40px;
-	text-align: center;
-}
-.block-1 {
-	background: rgba(116, 65, 65, 1);
-}
-.block-2 {
-	background: rgba(65, 83, 116, 1);
-	position: sticky;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-.block-3 {
-	background: rgba(74, 116, 65, 1);
-}
