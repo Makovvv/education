@@ -5,7 +5,7 @@ const userProfile = {
 	age,
 	lastName: 'Makov'
 }
-console.log(userProfile)
+// console.log(userProfile)
 // 
 const myCity = {
 	city: 'Ekb',
@@ -13,21 +13,7 @@ const myCity = {
 		console.log('Greetings')
 	}
 }
-myCity.cityGreeting()
-
-const person = {
-	name: 'Mak',
-	age: 23,
-	local: {
-		city: 'Chel'
-	}
-}
-const person2 = JSON.parse(JSON.stringify(person))
-person2.local.city = 'Ekb'
-console.log(person)
-console.log(person2)
-
-
+// myCity.cityGreeting()
 function myFn(a, b) {
 	let c
 	a = a + 1
@@ -35,13 +21,43 @@ function myFn(a, b) {
 	return c
 }
 const sumMyFn = myFn(3, 3)
-console.log(sumMyFn)
-
-
+// console.log(sumMyFn)
 function multiply(a, b){
 	let c
 	c = a * b
+	console.log(c)
 	return c
 }
-const sumMul = multiply(10, 5)
-console.log(sumMul)
+// console.log(multiply(10, 6))
+// const sumMul = multiply(10, 5)
+// console.log(sumMul)
+multiply(10, 6)
+multiply(50, 2)
+function sayMyName (a, b){
+	let c
+	c = a + b
+	console.log(c)
+	return c
+}
+// sayMyName('Ilya ', 'Makov ', 1999)
+// sayMyName('Chel ', 'or Ekb')
+
+
+const personOne = {
+	name: 'Mak',
+	age: 23
+}
+function person2 (personOne){
+	const updatePerson2 = {...personOne}
+	updatePerson2.age += 1
+	return updatePerson2
+}
+const updatePerson2 = person2(personOne)
+console.log(personOne.age)
+console.log(updatePerson2.age)
+
+
+function printMyName (){
+	console.log('Mak')
+}
+setTimeout(printMyName, 3000)
