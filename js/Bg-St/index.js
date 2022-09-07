@@ -45,5 +45,3 @@ function multiply(a, b){
 }
 const sumMul = multiply(10, 5)
 console.log(sumMul)
-
-// console.log(multiply(10, 5))
