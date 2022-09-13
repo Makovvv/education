@@ -1,147 +1,121 @@
-// const name = 'Ilya'
-// const age = 23
+// const newPost = (post, addedAt = Date()) => ({
+// 	...post,
+// 	addedAt: addedAt,
+// })
+// const firstPost = {
+// 	id: 1,
+// 	name: 'Makarov'
+// }
+// console.log(newPost(firstPost))
+
+// const fnWithError = () => {
+// 	throw new Error('Some error')
+// }
+// try {
+// 	fnWithError()
+// }catch(error){
+// 	// console.error(error)
+// 	console.log(error.message)
+// }
+// console.log('continue...')
+
+// let a = 10;
+
+// const b = 5;
+
+// if (a > b) {
+// 	console.log('a is larger'); // a is larger
+// }
+// for ( let i = 0; i++; i < 5) {
+// 	console.log(i);
+// }
+// const myArray = [1,2,3]
+
+// myArray.push(5)
+// myArray.pop()
+// myArray.unshift(10)
+// myArray.shift()
+
+// myArray.forEach(el => console.log(el *2))
+
+// const newArray = myArray.map(el => {
+// 	return el * 3
+// })
+
+// console.log(newArray)
+// console.log(myArray)
+
+// const {name, age} = userProfile
+// const {comments} = userProfile
+
+// const fruits = ['apple', 'banana']
+// const [fruitOne, fruitTwo] = fruits
+// console.log(fruitOne) // apple
+
 // const userProfile = {
-// 	name,
-// 	age,
-// 	lastName: 'Makov'
-// }
-// // console.log(userProfile)
-// // 
-// const myCity = {
-// 	city: 'Ekb',
-// 	cityGreeting: function () {
-// 		console.log('Greetings')
-// 	}
-// }
-// // myCity.cityGreeting()
-// function myFn(a, b) {
-// 	let c
-// 	a = a + 1
-// 	c = a + b
-// 	return c
-// }
-// const sumMyFn = myFn(3, 3)
-// // console.log(sumMyFn)
-// function multiply(a, b){
-// 	let c
-// 	c = a * b
-// 	console.log(c)
-// 	return c
-// }
-// // console.log(multiply(10, 6))
-// // const sumMul = multiply(10, 5)
-// // console.log(sumMul)
-// multiply(10, 6)
-// multiply(50, 2)
-// function sayMyName (a, b){
-// 	let c
-// 	c = a + b
-// 	console.log(c)
-// 	return c
-// }
-// // sayMyName('Ilya ', 'Makov ', 1999)
-// // sayMyName('Chel ', 'or Ekb')
-
-
-// const personOne = {
 // 	name: 'Mak',
-// 	age: 23
+// 	age: 23,
+// 	comments: true,
 // }
-// function person2 (personOne){
-// 	const updatePerson2 = {...personOne}
-// 	updatePerson2.age += 1
-// 	return updatePerson2
-// }
-// const updatePerson2 = person2(personOne)
-// console.log(personOne.age)
-// console.log(updatePerson2.age)
-
-
-// function printMyName (){
-// 	console.log('Mak')
-// }
-// setTimeout(printMyName, 3000)
-
-// const a = 5
-// function myFn () {
-// 	function innerFn () {
-// 		console.log (a)
+// const userInfo = ({name, age}) => {
+// 	if (!age) {
+// 		return `User ${name} has no comments`
 // 	}
-// 	innerFn ()
+// 	return `User ${name} has ${age} comments`
 // }
-// myFn()
+// console.log(userInfo(userProfile))
 
-// let a 
-// let b 
-// function myFn () {
-// 	let b
-// 	a = true
-// 	b = 10
-// 	console.log(b) // 10
+// const person = {
+// 	age: 20
 // }
-// myFn ()	// 10
-// console.log(a) // true
-// console.log(b) // undefined
+// if (!person.name) {
+// 	console.log('Name no provided')
+// }
+
+// let val = 10
+// if (val < 5){
+// 	val = val + 10
+// } else {
+// 	val = val - 10
+// }
+// console.log(val) // 0
+
+
+// const age = 19
+// if (age > 18) {
+// 	console.log('Ok, beer!')
+// } else if (age > 21) {
+// 	console.log('Ok and vodka')
+// } else {
+// 	console.log('Toworrow')
+// }
 
 // let a = 1
 // let b = 2
-// let c = 6
-// let d = 10
-// console.log(a && b && c && d) // undefined
-// console.log(a || b || c || d) // 1
-
-// const buttonInfo = {
-// 	text: 'buy'
-// }
-// const buttonStyle = {
-// 	w: 200,
-// 	h: 150,
-// 	color: 'red'
-// }
-// const button = {
-// 	...buttonInfo,
-// 	...buttonStyle
-// }
-// console.table(button) // 4 свойства
-
-// const name = 'My name is Mak,'
-// const city = 'i live in Chel'
-// const greeting = `${name} ${city}`
-// console.log(greeting)
-
-// const myFn = function(a, b) {
-// 	let c
-// 	a = a + 1
-// 	c = a + b
-// 	console.log(c)
-// 	return c
-// }
-// myFn (3, 3) // 7
-
-const myFn = (a, b) => {
-	let c
-	a = a + 1
-	c = a + b
-	console.log(c)
-	return c
+const sumPositiveNumbers = (a, b) => {
+	if (typeof a !== 'number' || typeof b !== 'number') {
+		return 'One of the arguments in not a number'
+	}
+	if (a <= 0 || b <= 0) {
+		return 'Numbers are not positive'
+	}
+	return a + b
 }
-myFn (3, 5) // 9
+console.log(sumPositiveNumbers(66, 3))
 
-const multByFactor = (value, multiplier = 1) => {
-	console.log(value * multiplier)
-	return value * multiplier
+const month = 2
+switch (month) {
+	case 12:
+		console.log('Dec')
+		break
+	case 2:
+		console.log('Feb')
+		break
+	case 1:
+		console.log('Jan')
+		break
+	default:
+		console.log('Это не зимний месяц')
 }
-multByFactor(10, 2) //20
-multByFactor(10)	  //10
 
-
-const newPost = (post, addedAt = Date()) => ({
-	...post,
-	addedAt: addedAt
-})
-const firstPost = {
-	id: 1,
-	name: 'Makarov'
-}
-console.table(newPost(firstPost))
 
